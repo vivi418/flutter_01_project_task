@@ -53,22 +53,12 @@ class ProjectList extends StatelessWidget{
                   flex: 1,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: LayoutBuilder(
-                      builder: (context, constraints) {
-                        double screenWidth = MediaQuery.of(context).size.width;
-                        double screenHeight = MediaQuery.of(context).size.height;
-
-                        double radius = screenWidth * 0.07;
-                        double lineWidth = screenWidth * 0.015;
-
-                        return CircularPercentIndicator(
-                          radius: radius,
-                          lineWidth: lineWidth,
-                          percent: 1.0,
-                          center: Text(task.progress),
-                          progressColor: Colors.blue,
-                        );
-                      },
+                    child: CircularPercentIndicator(
+                      radius: 30.0,
+                      lineWidth: 6.0,
+                      percent: 1.0,
+                      center: Text(task.progress ),
+                      progressColor: Colors.blue,
                     ),
                   ),
                 ),
